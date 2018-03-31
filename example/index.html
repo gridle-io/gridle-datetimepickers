@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Date and Time Pickers</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js" type="text/javascript"></script>
+        <script src="../dist/bundle.js" type="text/javascript"></script>
+    </head>
+    <body>
+		<div ng-app="pickers">
+			<div style="display: flex; flex-direction: row">
+				<span>{{datepicker}}</span>
+				<datepicker ng-model="datepicker"></datepicker>
+			</div>
+			<br/>
+			<div style="display: flex; flex-direction: row">
+				<span>{{timepicker}}</span>
+				<timepicker ng-model="timepicker"></timepicker>
+			</div>
+			<br/>
+			<div style="display: flex; flex-direction: row">
+				<span>{{datetimepicker}}</span>
+				<datetimepicker ng-model="datetimepicker" style="display: flex; flex-direction: row"></datetimepicker>
+			</div>
+		</div>
+		<script>
+			angular.module('pickers', ['gridle.datepicker', 'gridle.timepicker', 'gridle.datetimepicker']);
+		</script>
+    </body>
+</html>
