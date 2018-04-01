@@ -1,11 +1,21 @@
 {
     "name": "gridle-datetimepickers",
+    "version": "1.0.0",
     "description": "Date, Time and DateTime picker components",
-    "homepage": "",
     "repository": {
         "type": "git",
         "url": "https://github.com/gridle-io/gridle-datetimepickers.git"
     },
+    "keywords": [
+        "datepicker",
+        "timepicker",
+        "datetimepicker",
+        "datetime",
+        "angularjs",
+        "angular1.5",
+        "angular-components",
+        "angular-directives"
+      ],
     "main": "./src/index.js",
     "scripts": {
         "build": "rollup -c rollup.config.js"
