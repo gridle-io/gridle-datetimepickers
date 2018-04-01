@@ -10,15 +10,13 @@ import moment from 'moment';
  *
  * @description
  * The timepicker component renders a custom timepicker. The timepicker provides
- * 3 dropdowns, one for Year, Month and Date. The timepicker also uses the NgModelController,
+ * 3 dropdowns, one for hour, minute and the meridian. The timepicker also uses the NgModelController,
  * to use the parent ng-model variable and to enable form validations if used within a form.
  *
  * @param {Object} ngModel The ng-model value attached to the element.
- * @param {Object} datetimePickerConfig The datepicker configuration
- * @param {boolean} [datetimePickerConfig.isUtc=true] Whether the dateTime provided is in UTC or not
- * @param {Date|string|moment} [datetimePickerConfig.max=null] The maximum dateTime the datepicker should allow
- * @param {Date|string|moment} [datetimePickerConfig.min=null] The minimum dateTime the datepicker should allow
- * @param {boolean} [datetimePickerConfig.strict=true] Whether a strict parsing should be done or not
+ * @param {Object} timePickerConfig The timepicker configuration
+ * @param {boolean} [timePickerConfig.strict=true] Whether a strict parsing should be done or not
+ * @param {boolean} [timePickerConfig.validate=true] Whether to perform validation on the value or not
  */
 
 function timepickerComponent() {
@@ -67,7 +65,7 @@ function timepickerComponent() {
 }
 
 /**
- * The date-picker components link function
+ * The time-picker components link function
  * @function linkFn
  * @name timepickerComponent#link
  * @kind link
@@ -75,9 +73,7 @@ function timepickerComponent() {
 function linkFn($scope, element, attrs, NgModelController) {
 
 	/**
-	 * The datepicker configuration object
-	 * @property {Date|string|moment} [max=null] The maximum date the datepicker should allow
-	 * @property {Date|string|moment} [min=null] The minimum date the datepicker should allow
+	 * The timepicker configuration object
 	 * @property {boolean} [strict=true] Whether a strict parsing should be done or not
 	 * @property {boolean} [validate=false] Whether to perform validation on the value or not
 	 * @type {Object}

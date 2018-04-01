@@ -2,7 +2,7 @@
 
 import angular from 'angular';
 import moment from 'moment';
-import { isString } from 'lodash';
+import isString from 'lodash/isString';
 
 /**
  * @memberOf module:"gridle.datetimepicker"
@@ -10,14 +10,14 @@ import { isString } from 'lodash';
  * @name datetimepicker
  *
  * @description
- * The datetimepicker component renders a custom datetimepicker. It uses the NgModelController,
+ * The datetimepicker component renders a custom datetimePicker. It uses the NgModelController,
  * to use the parent ng-model variable and to enable form validations if used within a form.
  *
  * @param {Object} ngModel The ng-model value attached to the element.
- * @param {Object} datetimePickerConfig The datepicker configuration
+ * @param {Object} datetimePickerConfig The datetimePicker configuration
  * @param {boolean} [datetimePickerConfig.isUtc=true] Whether the dateTime provided is in UTC or not
- * @param {Date|string|moment} [datetimePickerConfig.max=null] The maximum dateTime the datepicker should allow
- * @param {Date|string|moment} [datetimePickerConfig.min=null] The minimum dateTime the datepicker should allow
+ * @param {Date|string|moment} [datetimePickerConfig.max=null] The maximum dateTime the datetimePicker should allow
+ * @param {Date|string|moment} [datetimePickerConfig.min=null] The minimum dateTime the datetimePicker should allow
  * @param {boolean} [datetimePickerConfig.strict=true] Whether a strict parsing should be done or not
  */
 
@@ -54,7 +54,7 @@ function datetimepickerComponent() {
 }
 
 /**
- * The date-picker components link function
+ * The datetimePicker components link function
  * @function linkFn
  * @name datetimepickerComponent#link
  * @kind link
@@ -80,10 +80,10 @@ function linkFn($scope, element, attrs, NgModelController) {
 	const datetimeFormat = 'Y-MM-DD HH:mm:ss';
 
 	/**
-	 * The datepicker configuration object
+	 * The datetimePicker configuration object
 	 * @property {boolean} [isUtc=false] Whether the dateTime provided is in UTC or not
-	 * @property {Date|string|moment} [max=null] The maximum date the datepicker should allow
-	 * @property {Date|string|moment} [min=null] The minimum date the datepicker should allow
+	 * @property {Date|string|moment} [max=null] The maximum date the datetimePicker should allow
+	 * @property {Date|string|moment} [min=null] The minimum date the datetimePicker should allow
 	 * @property {boolean} [strict=true] Whether a strict parsing should be done or not
 	 * @type {Object}
 	 */
@@ -198,7 +198,7 @@ function linkFn($scope, element, attrs, NgModelController) {
 	}
 
 	/**
-	 * Returns the maximum date limit the datepicker can handle
+	 * Returns the maximum dateTime limit the datetimePicker can handle
 	 * @function getMaximumLimit
 	 * @returns {moment}
 	 */
@@ -214,7 +214,7 @@ function linkFn($scope, element, attrs, NgModelController) {
 	}
 
 	/**
-	 * Returns the minimum date limit the datepicker can handle
+	 * Returns the minimum dateTime limit the datetimePicker can handle
 	 * @function getMinimumLimit
 	 * @returns {moment}
 	 */
@@ -238,7 +238,7 @@ function linkFn($scope, element, attrs, NgModelController) {
 	});
 
 	/**
-	 * NgModelController validator to check if a valid date has been provided/entered
+	 * NgModelController validator to check if a valid dateTime has been provided/entered
 	 * @function isValidDateTime
 	 * @param {string} modelValue
 	 * @param {object} viewValue
@@ -257,7 +257,7 @@ function linkFn($scope, element, attrs, NgModelController) {
 	}
 
 	/**
-	 * NgModelController validator to check if a date has been provided/entered
+	 * NgModelController validator to check if a dateTime has been provided/entered
 	 * @function isDateTimeProvided
 	 * @param {string} modelValue
 	 * @param {Object} viewValue

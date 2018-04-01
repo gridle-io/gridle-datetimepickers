@@ -2,7 +2,7 @@
 
 import angular from 'angular';
 import moment from 'moment';
-import { isString } from 'lodash';
+import isString from 'lodash/isString';
 
 /**
  * @kind function
