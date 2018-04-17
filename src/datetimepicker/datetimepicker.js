@@ -320,6 +320,7 @@ function linkFn($scope, element, attrs, NgModelController) {
 		}
 		$scope.datepickerConfig = Object.assign({}, $scope.datepickerConfig, config, {min, max});
 		$scope.timepickerConfig = Object.assign({}, $scope.timepickerConfig, config);
+		NgModelController.$validate();
 	});
 
 
